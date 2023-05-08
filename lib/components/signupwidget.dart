@@ -21,6 +21,7 @@ class signup_widget extends StatelessWidget {
   TextEditingController confirmPassword = TextEditingController();
   @required
   TextEditingController phoneNumber = TextEditingController();
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +42,7 @@ class signup_widget extends StatelessWidget {
         drawer: Drawer(),
         body: SingleChildScrollView(
           child: Column(
+            key: _formKey,
             children: [
               SizedBox(
                 height: 10,
@@ -58,7 +60,13 @@ class signup_widget extends StatelessWidget {
               ),
               Container(
                 padding: const EdgeInsets.all(10),
-                child: TextField(
+                child: TextFormField(
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter some text';
+                    }
+                    return null;
+                  },
                   controller: firstName,
                   decoration: InputDecoration(
                     hintText: 'First Name',
@@ -112,7 +120,7 @@ class signup_widget extends StatelessWidget {
               SizedBox(height: 10),
               Container(
                 padding: const EdgeInsets.all(10),
-                child: TextField(
+                child: TextFormField(
                   controller: email,
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
@@ -238,8 +246,13 @@ class signup_widget extends StatelessWidget {
                     print("you press me too long");
                   },
                   onPressed: () {
-                    confirmPassword;
-                    email;
+                    if (_formKey.currentState!.validate()) {
+                      // If the form is valid, display a snackbar. In the real world,
+                      // you'd often call a server or save the information in a database.
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('Processing Data')),
+                      );
+                    }
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) => login_Screen(),
