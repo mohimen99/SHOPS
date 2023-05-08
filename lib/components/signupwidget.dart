@@ -22,8 +22,6 @@ class signup_widget extends StatelessWidget {
   @required
   TextEditingController phoneNumber = TextEditingController();
 
-  
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -240,7 +238,8 @@ class signup_widget extends StatelessWidget {
                     print("you press me too long");
                   },
                   onPressed: () {
-                    val = data;
+                    confirmPassword;
+                    email;
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) => login_Screen(),
