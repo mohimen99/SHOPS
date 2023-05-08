@@ -11,7 +11,20 @@ class shopsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: shopsPageWidget(),
+        body: ListView(
+          children: <Widget>[
+            shopsPageWidget(),
+            shopsPageWidget(),
+            shopsPageWidget(),
+            shopsPageWidget(),
+            shopsPageWidget(),
+            shopsPageWidget(),
+            shopsPageWidget(),
+            shopsPageWidget(),
+            shopsPageWidget(),
+            shopsPageWidget(),
+          ],
+        ),
       ),
     );
   }

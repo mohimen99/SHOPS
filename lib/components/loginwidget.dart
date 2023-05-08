@@ -49,7 +49,7 @@ class loginWidget extends StatelessWidget {
                   alignment: Alignment.topCenter,
                   padding: const EdgeInsets.all(10),
                   child: const Text(
-                    'Future Application',
+                    'Online Shops',
                     style: TextStyle(
                         color: Colors.blue,
                         fontWeight: FontWeight.w500,

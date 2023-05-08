@@ -1,38 +1,50 @@
 import 'package:flutter/material.dart';
 
 class shopsPageWidget extends StatelessWidget {
-  const shopsPageWidget({Key? key}) : super(key: key);
+  shopsPageWidget({Key? key}) : super(key: key);
 
   @override
+  String textName = "Zara shop";
+  String networkImage =
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ24yhMfr14IJ2PmZ9dFI2_f8ywVEYBrFulA&usqp=CAU';
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(),
-        body: SingleChildScrollView(
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  Container(
-                    child: Image.network(
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ24yhMfr14IJ2PmZ9dFI2_f8ywVEYBrFulA&usqp=CAU',
-                      height: 100,
-                      width: 180,
-                    ),
-                    padding: const EdgeInsets.all(10),
+    return InkWell(
+      child: Card(
+        elevation: 10,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.max,
+              children: <Widget>[
+                Image.network(networkImage, width: 110, height: 100),
+              ],
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(12.0, 2.0, 2.0, 2.0),
+                  child: Text(
+                    textName,
+                    style: TextStyle(fontSize: 20.0),
                   ),
-                  Container(
-                    child: Image.network(
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwI2sqSW9R3-vgdb2IrrEAtZ4GOIqTUSuUaA&usqp=CAU',
-                      height: 100,
-                      width: 180,
-                    ),
-                    padding: const EdgeInsets.all(10),
-                  )
-                ],
-              ),
-            ],
-          ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(12.0, 6.0, 2.0, 2.0),
+                  child: Text(
+                    "Info",
+                    style:
+                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
     );

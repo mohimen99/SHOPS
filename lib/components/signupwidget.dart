@@ -7,13 +7,22 @@ class signup_widget extends StatelessWidget {
 
   String nationality = "";
   var items = ["Jordanian", "palestinian", "syrian", "lebanese", "turkish"];
+  @required
   TextEditingController firstName = TextEditingController();
+  @required
   TextEditingController middleName = TextEditingController();
+  @required
   TextEditingController lastName = TextEditingController();
+  @required
   TextEditingController email = TextEditingController();
+  @required
   TextEditingController password = TextEditingController();
+  @required
   TextEditingController confirmPassword = TextEditingController();
+  @required
   TextEditingController phoneNumber = TextEditingController();
+
+  
 
   @override
   Widget build(BuildContext context) {
@@ -220,7 +229,6 @@ class signup_widget extends StatelessWidget {
                 ]),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    // elevation: 50,
                     backgroundColor: Color.fromARGB(255, 255, 82, 82),
                     shape: new RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(30.0),
@@ -232,6 +240,7 @@ class signup_widget extends StatelessWidget {
                     print("you press me too long");
                   },
                   onPressed: () {
+                    val = data;
                     Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) => login_Screen(),
