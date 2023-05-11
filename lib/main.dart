@@ -1,4 +1,5 @@
 import 'package:appfuture/screens/home.dart';
+import 'package:appfuture/screens/splash_screen%20.dart';
 import 'package:flutter/material.dart';
 
 Future<void> main() async {
