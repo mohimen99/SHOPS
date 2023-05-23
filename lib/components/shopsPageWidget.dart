@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 
-class shopsPageWidget extends StatelessWidget {
+class shopsPageWidget extends StatefulWidget {
   shopsPageWidget({Key? key}) : super(key: key);
 
   @override
+  State<shopsPageWidget> createState() => _shopsPageWidgetState();
+}
+
+class _shopsPageWidgetState extends State<shopsPageWidget> {
   String textName = "Zara shop";
   String networkImage =
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ24yhMfr14IJ2PmZ9dFI2_f8ywVEYBrFulA&usqp=CAU';
+  @override
   Widget build(BuildContext context) {
     return InkWell(
       child: Card(

@@ -1,3 +1,4 @@
+import 'package:appfuture/components/homeWidget.dart';
 import 'package:appfuture/screens/login.dart';
 import 'package:flutter/material.dart';
 
@@ -28,11 +29,21 @@ class signup_widget extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          elevation: 0,
+          title: Text(
+            "Sign Up",
+            style: TextStyle(
+                color: Colors.black, fontSize: 25, fontWeight: FontWeight.bold),
+          ),
           brightness: Brightness.light,
-          backgroundColor: Colors.white,
+          backgroundColor: Color.fromARGB(255, 39, 155, 232),
           leading: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => homeWidget(),
+                  ),
+                );
+              },
               icon: Icon(
                 Icons.arrow_back_ios,
                 size: 20,
@@ -44,20 +55,6 @@ class signup_widget extends StatelessWidget {
           child: Column(
             key: _formKey,
             children: [
-              SizedBox(
-                height: 10,
-              ),
-              Text(
-                "Sign Up",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
               Container(
                 padding: const EdgeInsets.all(10),
                 child: TextFormField(

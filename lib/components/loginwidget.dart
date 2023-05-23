@@ -1,3 +1,4 @@
+import 'package:appfuture/components/homeWidget.dart';
 import 'package:appfuture/screens/shopsPage.dart';
 import 'package:appfuture/screens/signup.dart';
 import 'package:flutter/material.dart';
@@ -14,16 +15,27 @@ class loginWidget extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          title: Text(
+            'Online Shops',
+            style: TextStyle(color: Colors.black, fontSize: 25),
+          ),
           elevation: 0,
           brightness: Brightness.light,
-          backgroundColor: Colors.white,
+          backgroundColor: Color.fromARGB(255, 2, 150, 203),
           leading: IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.arrow_back_ios,
-                size: 20,
-                color: Colors.black,
-              )),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => homeWidget(),
+                ),
+              );
+            },
+            icon: Icon(
+              Icons.arrow_back_ios,
+              size: 20,
+              color: Colors.black,
+            ),
+          ),
         ),
         body: Center(
           child: SingleChildScrollView(
@@ -45,24 +57,9 @@ class loginWidget extends StatelessWidget {
                   color: Color.fromARGB(255, 3, 3, 3),
                   size: 100.0,
                 ),
-                Container(
-                  alignment: Alignment.topCenter,
-                  padding: const EdgeInsets.all(10),
-                  child: const Text(
-                    'Online Shops',
-                    style: TextStyle(
-                        color: Colors.blue,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 30),
-                  ),
+                SizedBox(
+                  height: 20,
                 ),
-                Container(
-                    alignment: Alignment.center,
-                    padding: const EdgeInsets.all(10),
-                    child: const Text(
-                      'Sign in',
-                      style: TextStyle(fontSize: 20),
-                    )),
                 Container(
                   padding: const EdgeInsets.all(10),
                   child: TextField(
