@@ -20,6 +20,17 @@ class homeWidget extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      SizedBox(
+                        height: 40,
+                      ),
+                      CircleAvatar(
+                        radius: 80,
+                        // backgroundColor: Colors.pink,
+                        backgroundImage: AssetImage('images/dakakeen-logo.png'),
+                      ),
+                      SizedBox(
+                        height: 90,
+                      ),
                       Text(
                         "Hello There!",
                         style: TextStyle(
@@ -36,13 +47,17 @@ class homeWidget extends StatelessWidget {
                       SizedBox(
                         height: 30,
                       ),
-                      Container(
-                        height: MediaQuery.of(context).size.height / 3,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: NetworkImage(
-                                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2fA6-TgYYNc8f3eZAi5lX4NWqLeHDtsJsvg&usqp=CAU'))),
-                      ),
+
+                      // Container(
+                      //   height: MediaQuery.of(context).size.height / 3,
+                      //   decoration: BoxDecoration(
+                      //     borderRadius: BorderRadius.circular(700.0),
+                      //     image: DecorationImage(
+                      //       image: AssetImage(
+                      //           'images/savvy-shopping-high-resolution-color-logo.png'),
+                      //     ),
+                      //   ),
+                      // ),
                       SizedBox(
                         height: 30,
                       ),

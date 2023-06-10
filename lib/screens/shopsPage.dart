@@ -1,4 +1,5 @@
 import 'package:appfuture/components/shopsPageWidget.dart';
+import 'package:appfuture/screens/favorite.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -15,32 +16,43 @@ class shopsPage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          leading: Icon(Icons.menu),
-          title: Text('Online Shops'),
+          leading: IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.menu),
+          ),
           actions: [
-            Icon(Icons.favorite),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16),
-              child: Icon(
-                Icons.search,
-              ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.search),
             ),
-            Icon(Icons.more_vert),
+            // IconButton(
+            //   onPressed: () {
+            //     Navigator.of(context).push(
+            //       MaterialPageRoute(
+            //         builder: (context) => favorite(),
+            //       ),
+            //     );
+            //   },
+            //   icon: Icon(Icons.favorite),
+            // ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.account_circle),
+            ),
           ],
           backgroundColor: Color.fromARGB(255, 0, 29, 250),
         ),
         body: ListView(
-          children: <Widget>[
-            shopsPageWidget(),
-            shopsPageWidget(),
-            shopsPageWidget(),
-            shopsPageWidget(),
-            shopsPageWidget(),
-            shopsPageWidget(),
-            shopsPageWidget(),
-            shopsPageWidget(),
-            shopsPageWidget(),
-            shopsPageWidget(),
+          children: [
+            Wrap(
+              children: [
+                shopsPageWidget(),
+                shopsPageWidget(),
+                shopsPageWidget(),
+                shopsPageWidget(),
+                shopsPageWidget(),
+              ],
+            ),
           ],
         ),
       ),

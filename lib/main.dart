@@ -1,4 +1,4 @@
-import 'package:appfuture/screens/home.dart';
+import 'package:appfuture/screens/shopsPage.dart';
 import 'package:flutter/material.dart';
 
 Future<void> main() async {
@@ -10,6 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return home_screen();
+    return shopsPage();
   }
 }
