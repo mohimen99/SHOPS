@@ -1,5 +1,6 @@
 import 'package:appfuture/components/shopsPageWidget.dart';
 import 'package:appfuture/screens/favorite.dart';
+import 'package:fab_circular_menu/fab_circular_menu.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -15,47 +16,38 @@ class shopsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          leading: IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.menu),
-          ),
-          actions: [
-            IconButton(
+          appBar: AppBar(
+            leading: IconButton(
               onPressed: () {},
-              icon: Icon(Icons.search),
+              icon: Icon(Icons.menu),
             ),
-            // IconButton(
-            //   onPressed: () {
-            //     Navigator.of(context).push(
-            //       MaterialPageRoute(
-            //         builder: (context) => favorite(),
-            //       ),
-            //     );
-            //   },
-            //   icon: Icon(Icons.favorite),
-            // ),
+            actions: [],
+            backgroundColor: Color.fromARGB(255, 0, 29, 250),
+          ),
+          body: ListView(
+            children: [
+              Wrap(
+                children: [
+                  shopsPageWidget(),
+                  shopsPageWidget(),
+                  shopsPageWidget(),
+                  shopsPageWidget(),
+                  shopsPageWidget(),
+                ],
+              ),
+            ],
+          ),
+          floatingActionButton: FabCircularMenu(children: <Widget>[
+            IconButton(icon: Icon(Icons.home), onPressed: () {}),
             IconButton(
               onPressed: () {},
               icon: Icon(Icons.account_circle),
             ),
-          ],
-          backgroundColor: Color.fromARGB(255, 0, 29, 250),
-        ),
-        body: ListView(
-          children: [
-            Wrap(
-              children: [
-                shopsPageWidget(),
-                shopsPageWidget(),
-                shopsPageWidget(),
-                shopsPageWidget(),
-                shopsPageWidget(),
-              ],
-            ),
-          ],
-        ),
-      ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.settings),
+            )
+          ])),
     );
   }
 }

@@ -24,9 +24,9 @@ class homeWidget extends StatelessWidget {
                         height: 40,
                       ),
                       CircleAvatar(
-                        radius: 80,
+                        radius: 70,
                         // backgroundColor: Colors.pink,
-                        backgroundImage: AssetImage('images/dakakeen-logo.png'),
+                        backgroundImage: AssetImage('images/shoppinggo.png'),
                       ),
                       SizedBox(
                         height: 90,
