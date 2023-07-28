@@ -1,5 +1,5 @@
 import 'package:appfuture/components/homeWidget.dart';
-import 'package:appfuture/screens/login.dart';
+import 'package:appfuture/auth/loginpage/login.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -232,7 +232,6 @@ class signup_widget extends StatelessWidget {
                 ]),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 255, 82, 82),
                     shape: new RoundedRectangleBorder(
                       borderRadius: new BorderRadius.circular(30.0),
                     ),

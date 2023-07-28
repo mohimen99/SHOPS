@@ -1,5 +1,5 @@
-import 'package:appfuture/screens/login.dart';
-import 'package:appfuture/screens/signup.dart';
+import 'package:appfuture/auth/loginpage/login.dart';
+import 'package:appfuture/auth/signUpPage/signup.dart';
 import 'package:flutter/material.dart';
 
 class homeWidget extends StatelessWidget {

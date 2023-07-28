@@ -1,6 +1,7 @@
+import 'package:appfuture/screens/account.dart';
 import 'package:appfuture/screens/favorite.dart';
 import 'package:appfuture/screens/search.dart';
-import 'package:appfuture/screens/shopsPage.dart';
+import 'package:appfuture/Home/shopsPage.dart';
 import 'package:appfuture/screens/zaraShop/zaraWidget.dart';
 import 'package:fab_circular_menu/fab_circular_menu.dart';
 import 'package:flutter/material.dart';
@@ -27,10 +28,10 @@ class _zara_screenState extends State<zara_screen> {
             actions: [
               IconButton(
                 onPressed: () {
-                  showSearch(
-                    context: context,
-                    delegate: DataSearch(),
-                  );
+                  // showSearch(
+                  //   context: context,
+                  //   delegate: DataSearch(),
+                  // );
                 },
                 icon: Icon(Icons.search),
               ),
@@ -69,7 +70,13 @@ class _zara_screenState extends State<zara_screen> {
               },
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => account_Screen(),
+                  ),
+                );
+              },
               icon: Icon(Icons.account_circle),
             ),
             IconButton(

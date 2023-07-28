@@ -1,4 +1,4 @@
-import 'package:appfuture/components/signupwidget.dart';
+import 'package:appfuture/auth/signUpPage/signupwidget.dart';
 import 'package:flutter/material.dart';
 
 class signup_screen extends StatefulWidget {

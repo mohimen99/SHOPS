@@ -1,4 +1,4 @@
-import 'package:appfuture/components/loginwidget.dart';
+import 'package:appfuture/auth/loginpage/loginwidget.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable

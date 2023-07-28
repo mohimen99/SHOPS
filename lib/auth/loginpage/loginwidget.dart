@@ -1,6 +1,6 @@
 import 'package:appfuture/components/homeWidget.dart';
-import 'package:appfuture/screens/shopsPage.dart';
-import 'package:appfuture/screens/signup.dart';
+import 'package:appfuture/Home/shopsPage.dart';
+import 'package:appfuture/auth/signUpPage/signup.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -14,48 +14,16 @@ class loginWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'Online Shops',
-            style: TextStyle(color: Colors.black, fontSize: 25),
-          ),
-          elevation: 0,
-          brightness: Brightness.light,
-          backgroundColor: Color.fromARGB(255, 2, 150, 203),
-          leading: IconButton(
-            onPressed: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => homeWidget(),
-                ),
-              );
-            },
-            icon: Icon(
-              Icons.arrow_back_ios,
-              size: 20,
-              color: Colors.black,
-            ),
-          ),
-        ),
         body: Center(
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Text(
-                  "Login",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                  ),
+                CircleAvatar(
+                  radius: 70,
+                  backgroundImage: AssetImage('images/shoppinggo1.png'),
                 ),
                 SizedBox(
                   height: 30,
-                ),
-                Icon(
-                  Icons.person,
-                  color: Color.fromARGB(255, 3, 3, 3),
-                  size: 100.0,
                 ),
                 SizedBox(
                   height: 20,
@@ -65,6 +33,7 @@ class loginWidget extends StatelessWidget {
                   child: TextField(
                     controller: nameController,
                     decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.person),
                       hintText: 'User Name Or Email',
                       contentPadding:
                           EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -81,6 +50,7 @@ class loginWidget extends StatelessWidget {
                     keyboardType: TextInputType.text,
                     controller: passwordController,
                     decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.password),
                       hintText: 'Password',
                       contentPadding:
                           EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
@@ -125,7 +95,7 @@ class loginWidget extends StatelessWidget {
                       print("you press me too long");
                     },
                     onPressed: () {
-                      Navigator.of(context).push(
+                      Navigator.of(context).pushReplacement(
                         MaterialPageRoute(
                           builder: (context) => shopsPage(),
                         ),
@@ -133,7 +103,7 @@ class loginWidget extends StatelessWidget {
                     },
                     child: Text(
                       "Login",
-                      style: TextStyle(fontSize: 18),
+                      style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ),
                 ),

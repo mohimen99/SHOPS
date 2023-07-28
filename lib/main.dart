@@ -1,5 +1,7 @@
-import 'package:appfuture/screens/home.dart';
-import 'package:appfuture/screens/shopsPage.dart';
+import 'package:appfuture/auth/loginpage/login.dart';
+import 'package:appfuture/auth/signUpPage/signup.dart';
+import 'package:appfuture/home.dart';
+import 'package:appfuture/Home/shopsPage.dart';
 import 'package:flutter/material.dart';
 
 Future<void> main() async {
@@ -11,6 +13,26 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return home_screen();
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: home_screen(),
+        theme: ThemeData(
+          buttonColor: Color.fromARGB(255, 106, 183, 247),
+          primaryColor: Color.fromARGB(255, 106, 183, 247),
+          textTheme: TextTheme(
+            titleLarge: TextStyle(
+              color: Colors.white,
+              fontSize: 20,
+            ),
+          ),
+        ),
+        routes: {
+          "Login": (context) =>
+              login_Screen(), // login page route name and its builder
+          "SignUp": (context) =>
+              signup_screen(), // SignUp page route name and its builder
+          "shopsPage": (context) =>
+              shopsPage(), // shopsPage page route name and its builder
+        });
   }
 }
