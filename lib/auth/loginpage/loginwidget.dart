@@ -1,5 +1,4 @@
-import 'package:appfuture/components/homeWidget.dart';
-import 'package:appfuture/Home/shopsPage.dart';
+import 'package:appfuture/shopScreens/shopsPage.dart';
 import 'package:appfuture/auth/signUpPage/signup.dart';
 import 'package:flutter/material.dart';
 

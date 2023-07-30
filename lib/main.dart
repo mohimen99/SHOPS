@@ -1,7 +1,7 @@
 import 'package:appfuture/auth/loginpage/login.dart';
 import 'package:appfuture/auth/signUpPage/signup.dart';
 import 'package:appfuture/home.dart';
-import 'package:appfuture/Home/shopsPage.dart';
+import 'package:appfuture/shopScreens/shopsPage.dart';
 import 'package:flutter/material.dart';
 
 Future<void> main() async {

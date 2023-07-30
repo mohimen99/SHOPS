@@ -1,6 +1,5 @@
-import 'package:appfuture/Home/shopsPageWidget.dart';
+import 'package:appfuture/shopScreens/shopsPageWidget.dart';
 import 'package:appfuture/screens/account.dart';
-import 'package:appfuture/screens/favorite.dart';
 import 'package:appfuture/home.dart';
 import 'package:fab_circular_menu/fab_circular_menu.dart';
 import 'package:flutter/material.dart';
@@ -35,10 +34,6 @@ class shopsPage extends StatelessWidget {
             children: [
               Wrap(
                 children: [
-                  shopsPageWidget(),
-                  shopsPageWidget(),
-                  shopsPageWidget(),
-                  shopsPageWidget(),
                   shopsPageWidget(),
                 ],
               ),

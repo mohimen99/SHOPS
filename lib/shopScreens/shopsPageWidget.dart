@@ -1,4 +1,4 @@
-import 'package:appfuture/screens/zaraShop/zaraScreen.dart';
+import 'package:appfuture/shopScreens/prodectPage.dart';
 import 'package:flutter/material.dart';
 
 class shopsPageWidget extends StatefulWidget {
@@ -33,7 +33,7 @@ class _shopsPageWidgetState extends State<shopsPageWidget> {
             onPressed: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) => zara_screen(),
+                  builder: (context) => prodectPage(),
                 ),
               );
             },
