@@ -1,7 +1,7 @@
+import 'package:appfuture/shopScreens/shopHome.dart';
 import 'package:flutter/material.dart';
 import 'package:appfuture/screens/account.dart';
 import 'package:appfuture/screens/favorite.dart';
-import 'package:appfuture/shopScreens/shopsPage.dart';
 import 'package:fab_circular_menu/fab_circular_menu.dart';
 
 class prodectPage extends StatefulWidget {
@@ -55,7 +55,7 @@ class _prodectPageState extends State<prodectPage> {
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => shopsPage(),
+                      builder: (context) => shopHome(),
                     ),
                   );
                 }),

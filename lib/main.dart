@@ -1,7 +1,7 @@
 import 'package:appfuture/auth/loginpage/login.dart';
 import 'package:appfuture/auth/signUpPage/signup.dart';
 import 'package:appfuture/home.dart';
-import 'package:appfuture/shopScreens/shopsPage.dart';
+import 'package:appfuture/shopScreens/shopHome.dart';
 import 'package:flutter/material.dart';
 
 Future<void> main() async {
@@ -31,8 +31,8 @@ class MyApp extends StatelessWidget {
               login_Screen(), // login page route name and its builder
           "SignUp": (context) =>
               signup_screen(), // SignUp page route name and its builder
-          "shopsPage": (context) =>
-              shopsPage(), // shopsPage page route name and its builder
+          "shopHome": (context) =>
+              shopHome(), // shopsPage page route name and its builder
         });
   }
 }
