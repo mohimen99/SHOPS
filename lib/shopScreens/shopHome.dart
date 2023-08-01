@@ -1,6 +1,5 @@
 import 'package:appfuture/shopScreens/prodectPage.dart';
 import 'package:appfuture/screens/account.dart';
-import 'package:appfuture/home.dart';
 import 'package:fab_circular_menu/fab_circular_menu.dart';
 import 'package:flutter/material.dart';
 
@@ -17,35 +16,41 @@ class shopHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-            title: Text("Shops"),
-            centerTitle: true,
-            actions: [
-              IconButton(
+        appBar: AppBar(
+          title: Text("Shops"),
+          centerTitle: true,
+          actions: [
+            IconButton(
+              onPressed: () {
+                showSearch(context: context, delegate: DataSearch());
+              },
+              icon: Icon(Icons.search),
+            ),
+            IconButton(
                 onPressed: () {
-                  showSearch(context: context, delegate: DataSearch());
+                  Navigator.of(context).pushNamed("Login");
                 },
-                icon: Icon(Icons.search),
-              ),
-            ],
-            backgroundColor: Color.fromARGB(255, 0, 29, 250),
-          ),
-          body: ListView(
-            children: [
-              Wrap(
-                children: [
-                  shopHomeWidget(),
-                ],
-              ),
-            ],
-          ),
-          floatingActionButton: FabCircularMenu(children: <Widget>[
+                icon: Icon(Icons.login))
+          ],
+          backgroundColor: Color.fromARGB(255, 0, 29, 250),
+        ),
+        body: ListView(
+          children: [
+            Wrap(
+              children: [
+                shopHomeWidget(),
+              ],
+            ),
+          ],
+        ),
+        floatingActionButton: FabCircularMenu(
+          children: <Widget>[
             IconButton(
                 icon: Icon(Icons.home),
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
-                      builder: (context) => home_screen(),
+                      builder: (context) => shopHome(),
                     ),
                   );
                 }),
@@ -62,8 +67,10 @@ class shopHome extends StatelessWidget {
             IconButton(
               onPressed: () {},
               icon: Icon(Icons.settings),
-            )
-          ])),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

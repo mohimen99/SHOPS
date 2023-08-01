@@ -1,6 +1,5 @@
 import 'dart:async';
-
-import 'package:appfuture/home.dart';
+import 'package:appfuture/shopScreens/shopHome.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -19,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
     new Timer(const Duration(milliseconds: 1000), () {
       setState(() {
         Navigator.of(context).pushAndRemoveUntil(
-            MaterialPageRoute(builder: (context) => home_screen()),
+            MaterialPageRoute(builder: (context) => shopHome()),
             (route) => false);
       });
     });

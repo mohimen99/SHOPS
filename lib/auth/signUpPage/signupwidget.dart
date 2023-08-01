@@ -1,5 +1,5 @@
-import 'package:appfuture/components/homeWidget.dart';
 import 'package:appfuture/auth/loginpage/login.dart';
+import 'package:appfuture/shopScreens/shopHome.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -40,7 +40,7 @@ class signup_widget extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => homeWidget(),
+                    builder: (context) => shopHome(),
                   ),
                 );
               },

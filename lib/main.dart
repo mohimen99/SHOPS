@@ -1,6 +1,5 @@
 import 'package:appfuture/auth/loginpage/login.dart';
 import 'package:appfuture/auth/signUpPage/signup.dart';
-import 'package:appfuture/home.dart';
 import 'package:appfuture/shopScreens/shopHome.dart';
 import 'package:flutter/material.dart';
 
@@ -15,13 +14,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: home_screen(),
+        home: shopHome(),
         theme: ThemeData(
           buttonColor: Color.fromARGB(255, 106, 183, 247),
-          primaryColor: Color.fromARGB(255, 106, 183, 247),
+          primaryColor: Color.fromARGB(255, 0, 0, 0),
           textTheme: TextTheme(
             titleLarge: TextStyle(
-              color: Colors.white,
+              color: Colors.black,
               fontSize: 20,
             ),
           ),
